@@ -1,24 +1,25 @@
 import { useState } from "react";
 import Tasks from "./components/tasks.jsx";
 import AddTask from "./components/AddTask.jsx";
+import { v4 } from "uuid";
 
 function App() {
   const [tasks, setTasks] = useState([
     {
-      id: 1,
+      id: v4(),
       title: "Estudar programção",
       description:
         "Estudar programação para se tornar um desenvolvedor full stack",
       isCompleted: false,
     },
     {
-      id: 2,
+      id: v4(),
       title: "Estudar React.js",
       description: "Aprimorar meus conhecimentos front end",
       isCompleted: false,
     },
     {
-      id: 3,
+      id: v4(),
       title: "Estudar Node.js",
       description: "Aprimorar meus conhecimentos back end",
       isCompleted: false,
