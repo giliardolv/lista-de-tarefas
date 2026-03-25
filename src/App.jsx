@@ -1,30 +1,13 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Tasks from "./components/tasks.jsx";
 import AddTask from "./components/AddTask.jsx";
 import { v4 } from "uuid";
+import Title from "./components/Title.jsx";
 
 function App() {
-  const [tasks, setTasks] = useState([
-    {
-      id: v4(),
-      title: "Estudar programção",
-      description:
-        "Estudar programação para se tornar um desenvolvedor full stack",
-      isCompleted: false,
-    },
-    {
-      id: v4(),
-      title: "Estudar React.js",
-      description: "Aprimorar meus conhecimentos front end",
-      isCompleted: false,
-    },
-    {
-      id: v4(),
-      title: "Estudar Node.js",
-      description: "Aprimorar meus conhecimentos back end",
-      isCompleted: false,
-    },
-  ]);
+  const [tasks, setTasks] = useState(
+    JSON.parse(localStorage.getItem("tasks")) || [],
+  );
 
   function onTaskClick(taskId) {
     const newTasks = tasks.map((task) => {
@@ -43,7 +26,7 @@ function App() {
 
   function addTaskSubmit(title, description) {
     const newTask = {
-      id: tasks.length + 1,
+      id: v4(),
       title,
       description,
       isCompleted: false,
@@ -51,12 +34,25 @@ function App() {
     setTasks([...tasks, newTask]);
   }
 
+  useEffect(() => {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  }, [tasks]);
+
+  // useEffect(() => {
+  //   const fetchTasks = async () => {
+  //     const response = await fetch(
+  //       "https://jsonplaceholder.typicode.com/todos?_limit=10",
+  //     );
+  //     const data = await response.json();
+  //     setTasks(data);
+  //   };
+  //   fetchTasks();
+  // }, []);
+
   return (
-    <div className="h-screen w-screen bg-slate-500 flex justify-center p-6">
+    <div className="w-screen min-h-screen bg-slate-500 flex justify-center p-6">
       <div className="w-[500px] space-y-4">
-        <h1 className="text-3xl text-slate-100 font-bold text-center">
-          Gerenciador de tarefas
-        </h1>
+        <Title>Gerenciador de tarefas</Title>
         <AddTask addTaskSubmit={addTaskSubmit} />
         <Tasks
           tasks={tasks}
