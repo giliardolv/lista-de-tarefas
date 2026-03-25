@@ -1,8 +1,55 @@
-# React + Vite
+# 📝 To-Do List com React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📌 Sobre o projeto
 
-Currently, two official plugins are available:
+Aplicação de lista de tarefas (To-Do List) desenvolvida com React, permitindo criar, visualizar e remover tarefas de forma dinâmica.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Este projeto foi desenvolvido com base em um tutorial, com o objetivo de praticar conceitos fundamentais do React e do ecossistema front-end moderno.
+
+---
+
+## 🚀 Funcionalidades
+
+- ✅ Criar tarefas com título e descrição
+- 📄 Visualizar detalhes da tarefa em uma página dedicada
+- 🗑️ Remover tarefas da lista
+- 💾 Persistência de dados com localStorage
+- 🆔 Geração de IDs únicos para cada tarefa
+
+---
+
+## 🛠️ Tecnologias e ferramentas
+
+- React
+- React Router DOM
+- Tailwind CSS
+- UUID
+- Lucide React
+- Vite
+
+---
+
+## 🧠 Aprendizados
+
+Durante o desenvolvimento deste projeto, pratiquei:
+
+- Gerenciamento de estado com useState
+- Uso de useEffect para persistência de dados
+- Navegação com React Router
+- Estruturação de componentes
+- Manipulação de arrays e objetos
+
+---
+
+## 🙏 Créditos
+
+Este projeto foi desenvolvido com base em um tutorial disponível no YouTube.
+Todos os créditos ao autor original pelo conteúdo educacional.
+
+Felipe Rocha: [Curso de React para Completos Iniciantes [2026]](https://youtu.be/2RWsLmu8yVc?si=1uTytg-Y09hFJ3gv)
+
+---
+
+## 📌 Observação
+
+Projeto desenvolvido para fins de estudo, com melhorias podendo ser implementadas futuramente.
