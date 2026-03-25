@@ -18,6 +18,13 @@ Este projeto foi desenvolvido com base em um tutorial, com o objetivo de pratica
 
 ---
 
+## 🔗 Acesse o projeto
+
+- 🌐 **Demo:** https://gerenciador-de-tarefas-giliard.netlify.app/
+- 💻 **Código:** https://github.com/giliardolv/lista-de-tarefas
+
+---
+
 ## 🛠️ Tecnologias e ferramentas
 
 - React
